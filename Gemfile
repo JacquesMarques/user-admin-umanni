@@ -60,6 +60,8 @@ gem 'devise', '~> 4.9', '>= 4.9.2'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  # provides integration between factory_bot and rails 5.0 or newer
+  gem 'factory_bot_rails', '~> 6.2'
   # rspec-rails is a testing framework for Rails 5+.
   gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
 end
@@ -82,12 +84,12 @@ group :test do
   gem "capybara"
   # Strategies for cleaning databases. Can be used to ensure a clean slate for testing.
   gem 'database_cleaner', '~> 2.0', '>= 2.0.2'
-  # provides integration between factory_bot and rails 5.0 or newer
-  gem 'factory_bot_rails', '~> 6.2'
   # Easily generate fake data
   gem 'faker', '~> 3.1', '>= 3.1.1'
   # Selenium is a browser automation tool for automated testing of webapps and more
   gem 'selenium-webdriver', '~> 4.9', '>= 4.9.1'
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners to test common Rails functionality
+  gem 'shoulda-matchers', '~> 5.3'
   # Easy download and use of browser drivers.
   gem 'webdrivers', '~> 5.2'
 end
